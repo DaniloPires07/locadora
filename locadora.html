@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venda de Carros</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        .carros {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .carro {
+            background-color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 300px;
+        }
+
+        .carro img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+        }
+
+        button {
+            background-color: #27ae60;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #2ecc71;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Loja de Carros</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Estoque</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="carros">
+            <div class="carro">
+                <img src="porche.jpeg" alt="Carro 1">
+                <h2>Carro Modelo A</h2>
+                <p>R$ 50.000,00</p>
+                <button onclick="comprar('Carro Modelo A', 50000)">Comprar</button>
+            </div>
+            <div class="carro">
+                <img src="civic.jpeg" alt="Carro 2">
+                <h2>Carro Modelo B</h2>
+                <p>R$ 70.000,00</p>
+                <button onclick="comprar('Carro Modelo B', 70000)">Comprar</button>
+            </div>
+            <div class="carro">
+                <img src="mercedes.jpeg" alt="Carro 3">
+                <h2>Carro Modelo C</h2>
+                <p>R$ 90.000,00</p>
+                <button onclick="comprar('Carro Modelo C', 90000)">Comprar</button>
+            </div>
+            <div class="carro">
+                <img src="camarro.jpeg" alt="Carro 4">
+                <h2>Carro Modelo D</h2>
+                <p>R$ 120.000,00</p>
+                <button onclick="comprar('Carro Modelo D', 120000)">Comprar</button>
+            </div>
+            <div class="carro">
+                <img src="carro.jpeg" alt="Carro 5">
+                <h2>Carro Modelo E</h2>
+                <p>R$ 150.000,00</p>
+                <button onclick="comprar('Carro Modelo E', 150000)">Comprar</button>
+            </div>
+            <div class="carro">
+                <img src="images.jpeg" alt="Carro 6">
+                <h2>Carro Modelo F</h2>
+                <p>R$ 180.000,00</p>
+                <button onclick="comprar('Carro Modelo F', 180000)">Comprar</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Loja de Carros. Todos os direitos reservados.</p>
+    </footer>
+    <script>
+        function comprar(modelo, preco) {
+            alert(`Você comprou o ${modelo} por R$ ${preco.toLocaleString('pt-BR')}`);
+        }
+    </script>
+</body>
+</html>
